@@ -1,0 +1,411 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    background-color: #071332;
+}
+
+
+
+body, html {
+    height: 100%; 
+    overflow: hidden; 
+}
+
+header {
+    background-color: #071332; 
+    color: white; 
+    text-align: center; 
+    padding: 45px 0; 
+}
+
+.container {
+    display: flex; 
+    height: calc(100% - 60px); 
+    margin: 0 25px; 
+}
+
+.column {
+    background-color: #071332;
+    text-align: left; 
+    margin: 0 12.5px; 
+}
+
+.column:first-child {
+    flex: 2; 
+    margin-left: 220px;
+    
+}
+
+.column:last-child {
+    flex: 3;
+    margin-right: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+    overflow-y: auto; 
+    color: white;
+    
+    scrollbar-width: none; 
+}
+
+
+.column:last-child::-webkit-scrollbar {
+    display: none;
+}
+
+.column:first-child h1, .column:first-child h2, .column:first-child p {
+    margin: 0; 
+    padding: 0; 
+}
+
+.column:first-child h1 {
+    font-size: 38px;
+    font-weight: bolder; 
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.column:first-child h2 {
+    font-size: 20px;
+    font-weight: 600; 
+    margin-bottom: 5px; 
+    color: #FFFFFF;
+}
+
+.column:first-child p {
+    font-size: 20px; 
+    font-weight: normal; 
+    color: #b3b3b3;
+}
+
+
+.image-50x50 {
+    width: 40px;
+    height: 40px; 
+    margin-right: 10px; 
+}
+
+
+.nav-item {
+    display: flex;
+    align-items: center; 
+    cursor: pointer;
+}
+
+.nav-item p {
+    margin: 0;
+    padding-left: 15px; 
+    color: #b3b3b3;
+    transition: color 0.3s, padding-left 0.3s; 
+}
+
+
+.circle {
+    width: 10px;
+    height: 4px; 
+    border-radius: 50%; 
+    background-color: #0b1839; 
+    transition: width 0.3s, border-radius 0.3s, background-color 0.3s; 
+}
+
+
+.nav-item:hover .circle {
+    width: 35px; 
+    border-radius: 0; 
+    background-color: #FFFFFF;
+    height: 4px; 
+}
+
+.nav-item:hover p {
+    color: #FFFFFF; 
+    padding-left: 10px; 
+}
+
+
+.nav-item.active .circle {
+    width: 20px; 
+    border-radius: 0; 
+    background-color: #FFFFFF;
+    height: 4px; 
+}
+
+.nav-item.active p {
+    color: #FFFFFF; 
+    padding-left: 10px; 
+}
+
+
+.nav-item .circle {
+    width: 0; 
+    border-radius: 0;
+}
+a {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.content {
+
+    overflow: hidden; 
+    position: relative;
+}
+
+
+.slide-out {
+    animation: slideOut 0.5s forwards;
+}
+
+
+.slide-in {
+    animation: slideIn 0.6s forwards;
+}
+
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%); 
+        display: none;
+    }
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); 
+        display: block;
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+.column:last-child {
+
+    color: #b3b3b3;
+}
+
+.column:last-child p {
+    font-size: 18px;
+}
+
+
+.column:last-child h1, .column:last-child h2 {
+    color: #b3b3b3; 
+}
+
+.content strong {
+    color: #ffffff; 
+}
+.content strong a {
+    color: #ffffff; 
+}
+
+.experience-item {
+    display: flex;
+    position: relative;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    margin-right: 20px;
+    color: #b3b3b3; 
+    
+    
+  }
+
+  .experience-item::after {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.3s;
+    z-index: 10;
+    margin-right: -20px;
+
+
+}
+.experience-item:hover::after {
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-radius: 10px;
+}
+.experience-item:hover h3 {
+    color: #28c4ad;
+}
+.experience-item:hover .experience-date-container {
+    color: #FFFFFF; 
+}
+
+  
+  .experience-date-container {
+    width: 650px; 
+    margin-left: 25px;
+    
+
+  }
+  
+  .experience-content-container {
+    flex-grow: 1;
+    
+
+  }
+  
+  .experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #28a7c4; 
+    color: #28c4ad;
+    border-radius: 50px;
+    padding: 6px 10px; 
+    margin-right: 10px; 
+    margin-bottom: 10px; 
+    font-size: 0.8em;
+    font-weight: bold; 
+    position: relative; 
+    z-index: 1;
+    overflow: hidden;
+}
+.tag::before {
+    content: '';
+    position: absolute;
+    top: -1px; 
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.69); 
+    border-radius: inherit; 
+    box-shadow: 0 0 0 2px #0b1839; 
+}
+.project-item {
+    display: flex;
+
+    position: relative;
+    margin-bottom: 30px;
+    color: #b3b3b3;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 15px;
+
+    
+}
+
+.project-item:hover::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -15px;
+    right: -10px;
+    bottom: 1px;
+    background-color: rgba(255, 255, 255, 0.05); 
+    border-radius: 10px;
+}
+
+.project-item:hover h3 {
+    color: #28c4ad; 
+}
+
+.project-image-container img {
+    height: 80px; 
+    width: 140px;
+    border-radius: 5%; 
+    border: 1px solid #6e6e6e;
+    object-fit: cover;
+    margin-right: 30px;
+    margin-top: 6px;
+    
+}
+
+#animatedName span {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  @keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .jump {
+    animation: jump 0.6s ease;
+    z-index: 1; 
+  }
+  #tec-content .options-list {
+    list-style: none; /* Elimina los bullets predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+  }
+
+  #tec-content .options-list li {
+    color: #b3b3b3; /* Mismo color de texto */
+    font-size: 20px; /* Mismo tamaño de fuente */
+    font-weight: 600; /* Mismo grosor de fuente */
+    padding: 20px; /* Aumenta el padding para más espacio alrededor del texto */
+    cursor: pointer;
+  }
+  
+  /* Mantener el divisor solo para elementos que no sean el último y hacerlo más grueso */
+  #tec-content .options-list li:not(:last-child) {
+    border-bottom: 2px solid #ccc; /* Aumenta el grosor del divisor */
+  }
+  #tec-content .option-details {
+    display: none; /* Inicialmente oculto */
+    min-height: 400px; /* Altura mínima para asegurar que sea al menos 5 veces más grande */
+    margin-top: 30px;
+    padding: 10px; /* Asegúrate de tener algo de padding para el texto */
+    background-color: #071332; /* Ajusta al color de fondo de la página */
+    font-weight: 300; /* Peso de la fuente para el texto dentro de los detalles */
+    /* Añade aquí cualquier otro estilo que necesites para los detalles */
+  }
+  
+  .details-columns {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .column-left, .column-right {
+    width: 50%; /* Ajusta esto según necesites */
+  }
+  
+  .detail-image {
+    display: block; /* Asegura que la imagen sea un bloque para centrarla */
+    width: 80%; /* Ajusta el tamaño de la imagen como prefieras */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 5px; /* Opcional: agrega bordes redondeados a la imagen */
+    margin: 0 auto 10px auto; /* Centra la imagen horizontalmente y añade espacio debajo */
+  }
+  
+  .framework-list {
+    list-style: none; /* Elimina los bullets */
+    padding: 0; /* Elimina el padding predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+  }
+  
+  .framework-title {
+    font-size: 1.5em; /* Aumenta el tamaño de "Frameworks". Ajusta según necesites */
+    font-weight: bold; /* Mantiene "Frameworks" en negrita */
+    margin-bottom: 10px; /* Espacio entre "Frameworks" y la lista de opciones */
+  }
+  
+  .framework-list li {
+    font-size: 0.em; /* Reduce el tamaño de las opciones. Ajusta según necesites */
+    margin-bottom: 5px; /* Espaciado entre opciones */
+  }
+  
