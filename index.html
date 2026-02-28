@@ -1,249 +1,314 @@
-  <!DOCTYPE html>
-  <html lang="es">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franco García | Portfolio</title>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Franco García´s Portafolio</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;600&display=swap" rel="stylesheet">
-  </head>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
+</head>
 
-  <body>
-    <header></header>
-    <div class="container">
-      <div class="column">
-        <h1 id="animatedName">
+<body>
+  <main class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="hero">
+        <h1 id="animatedName" class="name" aria-label="Franco García">
           <span>F</span><span>r</span><span>a</span><span>n</span><span>c</span><span>o</span>
-         
-          <span>G</span><span>a</span><span>r</span><span>c</span><span>i</span><span>a</span>
-          
+          <span class="space"> </span>
+          <span>G</span><span>a</span><span>r</span><span>c</span><span>í</span><span>a</span>
         </h1>
-        
-        <h2>Computer Enginner/Programmer/QA</h2>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="navigation">
-          <div class="nav-item" data-content="about-content">
-            <span class="circle"></span>
-            <p>About Me</p>
-          </div>
-          <br>
-          <div class="nav-item" data-content="experience-content">
-            <span class="circle"></span>
-            <p>Experience</p>
-          </div>
-          <br>
-          <div class="nav-item" data-content="projects-content">
-            <span class="circle"></span>
-            <p>Projects</p>
-          </div>
-          <br>
-          <div class="nav-item" data-content="tec-content">
-            <span class="circle"></span>
-            <p>Technologies</p>
-          </div>
+
+        <p class="role">Software Engineer · Full-Stack / Mobile · QA-minded</p>
+
+        <div class="cta">
+          <!-- Cambiá tu correo aquí -->
+          <a class="btn primary" href="mailto:francodanielgaca@gmail.com">Contact</a>
+
+          <!-- Si no tenés PDF aún, podés quitar este botón -->
+          <a class="btn ghost"
+            href="assets/Franco_Garcia_Software_Engineer_CV.pdf"
+            download="Franco_Garcia_Software_Engineer_CV.pdf">
+            Download CV
+          </a>
         </div>
-
-
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-  
-        <a href="https://www.linkedin.com/in/franco-garcia-94b849212/" target="_blank">
-          <img src="assets/linkedin.png" alt="Perfil de LinkedIn de Franco García" class="image-50x50">
-        </a>
-
-
-        <a href="https://github.com/FrancoGarcia19" target="_blank">
-          <img src="assets/github.png" alt="Perfil de GitHub de Franco García" class="image-50x50">
-        </a>
-
-        <a href="https://www.instagram.com/_francog.notfound_/" target="_blank">
-          <img src="assets/instagram.png" alt="Perfil de Instagram de Franco García" class="image-50x50">
-        </a>
-
-
       </div>
 
-      <div class="column">
+      <nav class="navigation" aria-label="Section navigation">
+        <button id="mobile-nav-toggle" class="menu-btn" aria-expanded="false" aria-controls="nav-list">
+          Menu
+        </button>
 
-        <div id="about-content" class="content">
-  
-          <p>My journey into programming began in 2010 when my computer teacher challenged me to create an engaging design 
-            and logic in Scratch within a day. Determined to prove myself, I took on the challenge and quickly 
-            discovered my passion for programming. </p>
-          <br>
-          <p>Now, I hold a Bachelor’s degree in Computer Engineering from<strong><a href="https://www.ulacit.ac.cr/" target="_blank"> Universidad Latinoamricana de Ciencia y Tecnología (ULACIT)
-              </a></strong> and have experience in mobile and web development, system optimization, and data management. I have worked on projects 
-              for a <strong><a
-                href="https://www.facebook.com/share/1DohxqvYUg/" target="_blank" style="color: #ffffff;">veterinary
-                hospital</a></strong>,
-                and an <strong><a href="https://globaly.cr/" target="_blank"
-                  style="color: #ffffff;">e-commerce</a></strong>.</p>
-                
-          </p>
-          <br>
-          <p> My technical expertise includes Python, Java, C#, .NET, and JavaScript, as well 
-            as database management with SQL Server, Oracle, and Firebase. 
-            Additionally, I am proficient in Scrum methodologies, RESTful API implementation, 
-            and software testing (QA).
-          </p>
-          <br>
-          <p> Currently, I am focused on developing scalable digital products and services, 
-            enhancing my skills in Machine Learning, AI, and QA, and expanding my technical stack.</p>
-          </p>
+        <div class="nav-list" id="nav-list">
+          <button class="nav-item" data-content="about-content" type="button">
+            <span class="circle"></span><span class="nav-text">About</span>
+          </button>
+
+          <button class="nav-item" data-content="experience-content" type="button">
+            <span class="circle"></span><span class="nav-text">Experience</span>
+          </button>
+
+          <button class="nav-item" data-content="projects-content" type="button">
+            <span class="circle"></span><span class="nav-text">Projects</span>
+          </button>
+
+          <button class="nav-item" data-content="tec-content" type="button">
+            <span class="circle"></span><span class="nav-text">Tech Stack</span>
+          </button>
         </div>
+      </nav>
 
-        <div id="experience-content" class="content" style="display: none;">
+      <div class="socials" aria-label="Social links">
+        <a href="https://www.linkedin.com/in/franco-garcia-94b849212/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="assets/linkedin.png" alt="" class="icon" />
+        </a>
 
-          <div class="experience-item">
-            <div class="experience-date-container">
-              <div class="experience-date"> Apr 2024—Oct 2024</div>
+        <a href="https://github.com/FrancoGarcia19" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="assets/github.png" alt="" class="icon" />
+        </a>
+
+        <a href="https://www.instagram.com/_francog.notfound_/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="assets/instagram.png" alt="" class="icon" />
+        </a>
+      </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <section class="panel" aria-live="polite">
+
+      <!-- ABOUT -->
+      <div id="about-content" class="content">
+        <h2 class="section-title">About</h2>
+
+        <p>
+          My journey into programming began in 2010 when a computer teacher challenged me to create an engaging Scratch project in a day.
+          I took on the challenge and quickly discovered my passion for building with logic and design.
+        </p>
+
+        <p>
+          I hold a Bachelor’s degree in Computer Engineering from
+          <strong><a href="https://www.ulacit.ac.cr/" target="_blank" rel="noopener">Universidad Latinoamericana de Ciencia y Tecnología (ULACIT)</a></strong>
+          and have experience in mobile and web development, system optimization, and data management.
+          I’ve built solutions for a
+          <strong><a href="https://www.facebook.com/share/1DohxqvYUg/" target="_blank" rel="noopener">veterinary hospital</a></strong>,
+          an
+          <strong><a href="https://globaly.cr/" target="_blank" rel="noopener">e-commerce company</a></strong>,
+          and a small business of
+          <strong><a href="https://kremsicr.com/" target="_blank" rel="noopener">Greek yogurt</a></strong>.
+        </p>
+
+        <p>
+          My technical expertise includes JavaScript, Python, C#, .NET, and Flutter,
+          plus database management with SQL Server, Oracle, and Firebase.
+          I’m also comfortable with Scrum workflows, REST APIs, and software testing (QA).
+        </p>
+
+        <p>
+          Currently, I’m focused on expanding my QA skills and exploring the field of Data Analysis while continuing to strengthen my engineering fundamentals.
+        </p>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div id="experience-content" class="content" style="display:none;">
+        <h2 class="section-title">Experience</h2>
+
+        <article class="card">
+          <div class="card-head">
+            <div class="date">2023 — Present</div>
+            <h3>Software Developer (Freelance) · Kremsi</h3>
+          </div>
+
+          <p class="card-text">
+            Led the digital presence development for Kremsi, delivering a responsive website,
+            improving product visualization, and optimizing user navigation.
+            Worked closely with business stakeholders to translate commercial needs into
+            scalable technical solutions, enhancing online brand positioning.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Front-End Development</span>
+            <span class="chip">Responsive Design</span>
+            <span class="chip">Stakeholder Collaboration</span>
+            <span class="chip">Technical Consulting</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <div class="date">Feb 2025 — Present</div>
+            <h3>Customer Service Representative · Foundever</h3>
+          </div>
+
+          <p class="card-text">
+            Support Capital One customers by resolving account, payment, and transaction inquiries.
+            Identify potential fraud, guide users through security protocols, and ensure compliance with data security standards while delivering high-quality service.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Customer Service</span>
+            <span class="chip">Problem Solving</span>
+            <span class="chip">Fraud Awareness</span>
+            <span class="chip">Communication</span>
+            <span class="chip">Compliance</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <div class="date">Apr 2024 — Oct 2024</div>
+            <h3>Software Developer · Hospital Veterinario Drs. Chacón</h3>
+          </div>
+
+          <p class="card-text">
+            Developed and optimized a digital medical records system with integrated inventory management,
+            internal messaging, and real-time patient history access to improve operational efficiency.
+          </p>
+
+          <div class="chips">
+            <span class="chip">JavaScript</span>
+            <span class="chip">C#</span>
+            <span class="chip">ASP.NET Core</span>
+            <span class="chip">Bootstrap</span>
+            <span class="chip">SQL Server</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-head">
+            <div class="date">Dec 2023 — Apr 2024</div>
+            <h3>Front-End / Mobile Developer · Globaly Marketplace</h3>
+          </div>
+
+          <p class="card-text">
+            Built and improved marketplace features including user authentication, order flows,
+            and performance-oriented UI updates to enhance user experience.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Flutter</span>
+            <span class="chip">Dart</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">PHP</span>
+            <span class="chip">Python</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- PROJECTS -->
+      <div id="projects-content" class="content" style="display:none;">
+        <h2 class="section-title">Projects</h2>
+
+        <article class="card project">
+          <div class="project-grid">
+            <div class="project-images">
+              <img src="assets/Kremsi2.png" alt="Kremsi website preview 1" />
+              <img src="assets/Kremsi1.png" alt="Kremsi website preview 2" />
             </div>
-            <div class="experience-content-container">
-              <h3>Software Developer • Hosptial Veterinario Drs. Chacón</h3>
-              <p>Developed and optimized a digital medical records system with integrated inventory management, 
-                internal messaging, and real-time patient history access, improving operational efficiency.</p>
-              <div class="experience-tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">C#</span>
-                <span class="tag">ASP.NET Core</span>
-                <span class="tag">Bootstrap</span>
-                <span class="tag">CSS</span>
-                <span class="tag">SQL</span>
 
+            <div>
+              <h3>Kremsi Website</h3>
+              <p class="card-text">
+                Informational website for Kremsi (Greek yogurt brand), showcasing products, pricing, and key consumer information.
+              </p>
+
+              <div class="actions">
+                <a class="link" href="https://kremsicr.com/" target="_blank" rel="noopener">Live</a>
+                <span class="dot">•</span>
+                <a class="link" href="https://kremsicr.com/" target="_blank" rel="noopener">Details</a>
+              </div>
+
+              <div class="chips">
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Bootstrap</span>
               </div>
             </div>
           </div>
+        </article>
 
-          <div class="experience-item">
-            <div class="experience-date-container">
-              <div class="experience-date">Dec 2023-Apr 2024</div>
+        <article class="card project">
+          <div class="project-grid">
+            <div class="project-images">
+              <img src="assets/Vet1.png" alt="Veterinary website preview 1" />
+              <img src="assets/Vet2.png" alt="Veterinary website preview 2" />
             </div>
-            <div class="experience-content-container">
-              <h3>Front-End / Mobile Developer • Globaly Marketplace</h3>
-              <p>Developed and enhanced a marketplace platform by implementing secure payment processing,
-                 user authentication, and order management features, optimizing performance and user 
-                 experience.</p>
-              <div class="experience-tags">
-                <span class="tag">JavaScript</span>
-                <span class="tag">PHP</span>
-                <span class="tag">Flutter</span>
-                <span class="tag">Dart</span>
-                <span class="tag">Python</span>
+
+            <div>
+              <h3>Veterinary Website</h3>
+              <p class="card-text">
+                Responsive website for a veterinary hospital with services, contact info, social media integration,
+                gallery, and an interactive Google Maps location.
+              </p>
+
+              <div class="chips">
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">Bootstrap</span>
               </div>
             </div>
           </div>
+        </article>
 
-        </div>
-
-
-        <div id="projects-content" class="content" style="display: none;">
-          <!-- Proyecto 1 -->
-          <div class="project-item">
-            <div class="project-image-container">
-              <img src="assets/Vet1.png" alt="Código del proyecto">
-              <img src="assets/Vet2.png" alt="Ejemplo del proyecto">
+        <article class="card project">
+          <div class="project-grid">
+            <div class="project-images">
+              <img src="assets/VetData2.png" alt="Veterinary database preview 1" />
+              <img src="assets/VetData1.png" alt="Veterinary database preview 2" />
             </div>
-            <div class="project-content-container">
-              <h3>Veterinary website</h3>
-              <p>Designed and developed a responsive website for a veterinary hospital, 
-                featuring sections for services, contact information, social media integration, 
-                an image gallery, and an interactive Google Maps location. </p>
-                <div class="experience-tags">
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">Bootstrap</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">HTML</span>
 
-                </div>
+            <div>
+              <h3>Veterinary Inventory System</h3>
+              <p class="card-text">
+                Windows Forms inventory management system with SQL Server CRUD operations,
+                input validation, and clear data visualization.
+              </p>
+
+              <div class="chips">
+                <span class="chip">C#</span>
+                <span class="chip">WinForms</span>
+                <span class="chip">SQL Server</span>
+              </div>
             </div>
           </div>
-
-          <div class="project-item">
-            <div class="project-image-container">
-              <img src="assets/VetData2.png" alt="Código del proyecto">
-              <img src="assets/VetData1.png" alt="Ejemplo del proyecto">
-            </div>
-            <div class="project-content-container">
-              <h3>Veterinary database</h3>
-              <p> Developed a Windows Forms inventory management system for a veterinary clinic, 
-                integrating SQL Server for CRUD operations, featuring a user-friendly interface with 
-                validation and data visualization.</p>
-                <div class="experience-tags">
-                  <span class="tag">C#</span>
-                  <span class="tag">ASP.NET Core</span>
-                  <span class="tag">SQL</span>
-
-                </div>
-            </div>
-          </div>
-
-
-
-        </div>
-        
-      
-
-        <div id="tec-content" class="content" style="display: none;">
-          <li>
-            JavaScript
-            <div class="option-details" style="display: none;">Detalles de Opción 2</div>
-          </li>
-          
-            <li>
-              Dart
-              <div class="option-details" style="display: none;">Detalles de Opción 2</div>
-            </li>
-
-            <li>
-              C# 
-              <div class="option-details" style="display: none;">Detalles de Opción 3</div>
-            </li>
-
-            <li>
-              Python 
-              <div class="option-details" style="display: none;">Detalles de Opción 3</div>
-            </li>
-
-            <li>
-              SQL
-              <div class="option-details" style="display: none;">Detalles de Opción 3</div>
-            </li>
-
-            <li>
-              Oracle 
-              <div class="option-details" style="display: none;">Detalles de Opción 3</div>
-            </li>
-
-            <!-- Agrega más opciones según necesites -->
-          </ul>
-        </div>
-        
-
-
-
+        </article>
       </div>
-    </div>
 
+      <!-- TECH STACK -->
+      <div id="tec-content" class="content" style="display:none;">
+        <h2 class="section-title">Tech Stack</h2>
 
+        <div class="stack-grid">
+          <div class="stack-card">
+            <h4>Languages</h4>
+            <p>JavaScript · Python · C# · Dart · SQL</p>
+          </div>
 
-    </div>
+          <div class="stack-card">
+            <h4>Frameworks</h4>
+            <p>.NET · Flutter · Bootstrap</p>
+          </div>
 
-    </div>
-    <script src="js/script.js"></script>
-  </body>
+          <div class="stack-card">
+            <h4>Databases</h4>
+            <p>SQL Server · Oracle · Firebase</p>
+          </div>
 
-  </html>
+          <div class="stack-card">
+            <h4>Tools</h4>
+            <p>Git · Postman · Scrum · REST APIs</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
